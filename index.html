@@ -5,8 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
 		<title>Sign Up</title>
-		<!-- <link rel="stylesheet" href="style.css"> -->
 	</head>
 	<body>
 		<div class="main-container">
@@ -46,7 +46,7 @@
 
                             <div class="field">
                                 <label for="phone">Phone number</label>
-                                <input type="tel" id="phone" name="phone">
+                                <input type="tel" id="phone" name="phone" maxlength="12"/>
                             </div>
 
                             <div class="field">
@@ -55,8 +55,8 @@
                             </div>
 
                             <div class="field">
-                                <label for="confPassword">Confirm password</label>
-                                <input type="password" id="confPassword" name="confPassword" class="error">
+                                <label for="password-conf">Confirm password</label>
+                                <input type="password" id="password-conf" name="confPassword" class="error">
                             </div>
 
                         </div>

@@ -13,7 +13,6 @@
 * {
 	margin: 0;
 	padding: 0;
-	/* box-sizing: border-box; */
 }
 
 body {
@@ -81,7 +80,6 @@ body {
 	background-color: hsl(0, 0%, 100%);
     color: hsl(170, 20%, 15%);
     box-shadow: 0 3px 5px hsla(92, 20%, 20%, 0.1);
-
 	/* min-height: 20%; */
 }
 
@@ -108,7 +106,6 @@ label {
 input {
 	width: 80%;
 	height: 2em;
-	/* border: 1px solid hsl(0, 0%, 90%); */
     border: 1px solid var(--clr-light-gray);
 	border-radius: 0.25em;
 
@@ -125,7 +122,8 @@ input:focus, input:invalid{
 }
 
 
-.error, input:invalid{
+/* .error,  */
+input:invalid{
     border-color: hsl(20, 80%, 50%);
 }
 
