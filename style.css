@@ -3,11 +3,9 @@
 	src: url("/fonts/Norse-Bold.otf");
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-
 :root {
-	--clr-green: 92, 20%, 35%;
-    --clr-red: hsl(20, 80%, 50%);
+	--clr-green: 92, 20%, 40%;
+	--clr-red: hsl(20, 80%, 50%);
 	--clr-light-gray: hsl(220, 13%, 91%);
 }
 
@@ -91,20 +89,38 @@ body {
 	position: relative;
 }
 
+input:focus + label, input.error + label, input.filled + label{
+    color: hsl(170, 20%, 15%);
+	background-color: white;
+    transform: translateY(-90%) translateX(-10%) scale(0.75);
+    box-shadow: 0 0 0 5px white;
+}
+
+input:focus + label, #password-conf + label {
+	transition: 0.3s ease;
+}
+		
+
 label {
-	font-size: 0.75em;
-	letter-spacing: 0.125em;
-	text-transform: uppercase;
 	position: absolute;
-	top: -1.25em;
-	white-space: nowrap;
+    left: 0.5em;
+	top: 0.5em;
+	font-size: 1em;
+    color: hsla(170, 20%, 15%, 0.7);
+    /* top: -1.25em; */
+    /* font-size: 0.5em; */
+	/* letter-spacing: 0.125em; */
+	/* text-transform: uppercase; */
+	/* white-space: nowrap; */
 }
 
 input {
+	font-size: 1em;
 	width: 80%;
 	height: 2em;
 	border: 1px solid var(--clr-light-gray);
 	border-radius: 0.25em;
+	padding: 0 0.5em;
 }
 
 input:focus {
@@ -118,16 +134,33 @@ input:invalid {
 	transition: 0.3s ease;
 }
 
+.symbol {
+	/* font-family: "Material Icons"; */
+	position: absolute;
+	top: 15%;
+	left: 75%;
+	background-color: white;
+}
+
+input.error:not(:focus) ~ .symbol::before {
+	content: "\e5c9";
+	color: var(--clr-red);
+}
+
+input.filled:not(:focus) ~ .symbol::before {
+	content: "\e86c";
+	color: hsl(var(--clr-green));
+}
+
 .error {
 	border-color: var(--clr-red);
 }
 
-.error-message{
-    color: var(--clr-red);
+.error-message {
+	color: var(--clr-red);
 	font-size: 0.75em;
-    margin: 0.25em;
-    position: absolute;
-	transition: 2s ease;
+	margin: 0.25em;
+	position: absolute;
 }
 
 .filled {
