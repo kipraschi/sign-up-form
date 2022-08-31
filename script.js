@@ -22,7 +22,6 @@ function validatePasswords() {
 		password2.setCustomValidity(errorMessage);
 		password2.className = "error";
         passwordError.textContent = errorMessage;
-
 	}
 }
 
