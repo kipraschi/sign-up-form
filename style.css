@@ -130,7 +130,6 @@ input:invalid {
 }
 
 .symbol {
-	/* font-family: "Material Icons"; */
 	position: absolute;
 	top: 15%;
 	left: 75%;
@@ -138,12 +137,12 @@ input:invalid {
 }
 
 input.error:not(:focus) ~ .symbol::before {
-	content: "\e5c9";
+	content: "\e5cd";
 	color: var(--clr-red);
 }
 
 input.filled:not(:focus) ~ .symbol::before {
-	content: "\e86c";
+	content: "\e876";
 	color: hsl(var(--clr-green));
 }
 
